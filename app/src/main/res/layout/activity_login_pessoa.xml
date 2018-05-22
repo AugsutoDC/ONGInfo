@@ -21,10 +21,10 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/etxtloginsenhapessoa"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.961" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/etxtloginsenhapessoa"
@@ -41,10 +41,10 @@
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.427" />
+        app:layout_constraintVertical_bias="0.369" />
 
     <Button
         android:id="@+id/btnsenhaperdidapessoa"

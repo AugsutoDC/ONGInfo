@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.PerfilOngActivity">
+
+    <TextView
+        android:id="@+id/etxteditnomeong"
+        android:layout_width="218dp"
+        android:layout_height="41dp"
+        android:contentDescription="@string/nome_ong"
+        android:text="Nome da ONG"
+        tools:layout_editor_absoluteX="83dp"
+        tools:layout_editor_absoluteY="31dp" />
+
+    <TextView
+        android:id="@+id/etxteditsobreong"
+        android:layout_width="324dp"
+        android:layout_height="56dp"
+        android:text="Sobre:"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="120dp" />
+
+    <TextView
+        android:id="@+id/etxteditsedeOng"
+        android:layout_width="323dp"
+        android:layout_height="56dp"
+        android:text="Sede(s):"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="252dp" />
+
+    <TextView
+        android:id="@+id/etxteditcontatoOng"
+        android:layout_width="324dp"
+        android:layout_height="59dp"
+        android:text="Contato:"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="184dp" />
+
+    <TextView
+        android:id="@+id/etxtediteventoOng"
+        android:layout_width="323dp"
+        android:layout_height="21dp"
+        android:text="Evento(s):"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="319dp" />
+
+    <ScrollView
+        android:layout_width="323dp"
+        android:layout_height="132dp"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="340dp">
+
+        <LinearLayout
+            android:id="@+id/LinearLayoutEvents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/imageeditsobre"
+        android:layout_width="29dp"
+        android:layout_height="19dp"
+        app:srcCompat="@android:drawable/ic_menu_edit"
+        tools:layout_editor_absoluteX="325dp"
+        tools:layout_editor_absoluteY="120dp" />
+
+    <ImageView
+        android:id="@+id/imageeditcontato"
+        android:layout_width="29dp"
+        android:layout_height="19dp"
+        app:srcCompat="@android:drawable/ic_menu_edit"
+        tools:layout_editor_absoluteX="325dp"
+        tools:layout_editor_absoluteY="184dp" />
+
+    <ImageView
+        android:id="@+id/imageeditsede"
+        android:layout_width="29dp"
+        android:layout_height="19dp"
+        app:srcCompat="@android:drawable/ic_menu_edit"
+        tools:layout_editor_absoluteX="325dp"
+        tools:layout_editor_absoluteY="252dp" />
+
+    <ImageView
+        android:id="@+id/imageeditevento"
+        android:layout_width="29dp"
+        android:layout_height="19dp"
+        app:srcCompat="@android:drawable/ic_menu_edit"
+        tools:layout_editor_absoluteX="325dp"
+        tools:layout_editor_absoluteY="319dp" />
+
+    <ImageView
+        android:id="@+id/imageeditnomeong"
+        android:layout_width="29dp"
+        android:layout_height="19dp"
+        app:srcCompat="@android:drawable/ic_menu_edit"
+        tools:layout_editor_absoluteX="272dp"
+        tools:layout_editor_absoluteY="31dp" />
+</android.support.constraint.ConstraintLayout>

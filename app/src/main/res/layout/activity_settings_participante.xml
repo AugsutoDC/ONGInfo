@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.TelaPrincipalActivity">
+
+    <TextView
+        android:id="@+id/txtlinkTermosPoliticas"
+        android:layout_width="209dp"
+        android:layout_height="18dp"
+        android:text="Termos e Políticas do Software"
+        tools:layout_editor_absoluteX="88dp"
+        tools:layout_editor_absoluteY="477dp" />
+
+    <TextView
+        android:id="@+id/txtlabFaleConosco"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        android:text="Fale conosco"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="234dp" />
+
+    <Button
+        android:id="@+id/bttalterarsenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alterar Senha"
+        tools:layout_editor_absoluteX="125dp"
+        tools:layout_editor_absoluteY="151dp" />
+
+    <Switch
+        android:id="@+id/swtAtivarPush"
+        android:layout_width="351dp"
+        android:layout_height="38dp"
+        android:checked="true"
+        android:text="Ativar Notificação"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="38dp" />
+
+    <TextView
+        android:id="@+id/txtlabemail"
+        android:layout_width="297dp"
+        android:layout_height="30dp"
+        android:text="Email:"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="93dp" />
+
+    <EditText
+        android:id="@+id/cxafaleconosco"
+        android:layout_width="304dp"
+        android:layout_height="159dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="256dp" />
+
+    <Button
+        android:id="@+id/bttEnviarEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
+        android:text="Enviar"
+        tools:layout_editor_absoluteX="260dp"
+        tools:layout_editor_absoluteY="415dp" />
+
+</android.support.constraint.ConstraintLayout>

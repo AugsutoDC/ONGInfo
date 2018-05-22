@@ -37,15 +37,16 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/etxtloginsenhaong"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.35"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.521" />
 
     <EditText
         android:id="@+id/etxtloginsenhaong"
         android:layout_width="wrap_content"
         android:layout_height="42dp"
-        android:layout_marginBottom="48dp"
+        android:layout_marginBottom="44dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
@@ -55,7 +56,7 @@
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/btnsenhaperdidaong"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.34"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -64,10 +65,10 @@
         android:layout_height="50dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="336dp"
+        android:layout_marginTop="332dp"
         android:text="@string/esqueceu_senha"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.18"
+        app:layout_constraintHorizontal_bias="0.075"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -79,10 +80,10 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="44dp"
         android:text="@string/primeiro_acesso"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintHorizontal_bias="0.295"
         app:layout_constraintStart_toEndOf="@+id/btnsenhaperdidaong"
         app:layout_constraintTop_toBottomOf="@+id/etxtloginsenhaong" />
 
@@ -100,5 +101,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnsenhaperdidaong" />
+        app:layout_constraintTop_toBottomOf="@+id/btnsenhaperdidaong"
+        app:layout_constraintVertical_bias="0.507" />
 </android.support.constraint.ConstraintLayout>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.MainActivity">
+
+    <ListView
+        android:id="@+id/_listaOngPartic"
+        android:layout_width="368dp"
+        android:layout_height="398dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="97dp" />
+
+    <EditText
+        android:id="@+id/etxtBuscaOngPartic"
+        android:layout_width="365dp"
+        android:layout_height="53dp"
+        android:ems="10"
+        android:inputType="textAutoComplete"
+        android:text="Buscar ONG"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="368dp"
+        android:layout_height="7dp"
+        android:background="?android:attr/listDivider"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="77dp" />
+
+</android.support.constraint.ConstraintLayout>

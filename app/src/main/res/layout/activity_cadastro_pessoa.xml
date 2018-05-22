@@ -6,24 +6,58 @@
     android:layout_height="match_parent"
     tools:context=".Activity.CadastroPessoaActivity">
 
-    <EditText
-        android:id="@+id/etxtcademailpessoa"
+    <Button
+        android:id="@+id/btncadcancelarpessoa"
         android:layout_width="wrap_content"
-        android:layout_height="42dp"
-        android:layout_marginBottom="244dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="28dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:text="@string/cancelar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.282"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxtcadconfirmarsenhapessoa"
+        app:layout_constraintVertical_bias="0.125" />
+
+    <Button
+        android:id="@+id/btncadconfirmarpessoa"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginBottom="28dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/confirmar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.258"
+        app:layout_constraintStart_toEndOf="@+id/btncadcancelarpessoa"
+        app:layout_constraintTop_toBottomOf="@+id/etxtcadconfirmarsenhapessoa"
+        app:layout_constraintVertical_bias="0.125" />
+
+    <EditText
+        android:id="@+id/etxteditsobreong"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_marginBottom="336dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:ems="10"
         android:hint="@string/email"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.35"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxtcadnomepessoa" />
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/etxtloginsenhapessoa"
@@ -40,10 +74,10 @@
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.352"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxtcademailpessoa"
-        app:layout_constraintVertical_bias="0.25" />
+        app:layout_constraintTop_toBottomOf="@+id/etxteditsobreong"
+        app:layout_constraintVertical_bias="0.027" />
 
     <EditText
         android:id="@+id/etxtcadconfirmarsenhapessoa"
@@ -60,10 +94,10 @@
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.352"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etxtloginsenhapessoa"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/imglogo"
@@ -83,59 +117,29 @@
         app:layout_constraintVertical_bias="0.032"
         app:srcCompat="@drawable/logo" />
 
-    <Button
-        android:id="@+id/btncadcancelarpessoa"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_marginBottom="28dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/cancelar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.194"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxtcadconfirmarsenhapessoa"
-        app:layout_constraintVertical_bias="0.814" />
+    <View
+        android:id="@+id/divider"
+        android:layout_width="350dp"
+        android:layout_height="20dp"
+        android:background="?android:attr/listDivider"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="17dp"
+        tools:layout_editor_absoluteY="394dp" />
 
     <Button
-        android:id="@+id/btncadconfirmarpessoa"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_marginBottom="28dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/confirmar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.201"
-        app:layout_constraintStart_toEndOf="@+id/btncadcancelarpessoa"
-        app:layout_constraintTop_toBottomOf="@+id/etxtcadconfirmarsenhapessoa"
-        app:layout_constraintVertical_bias="0.821" />
+        android:id="@+id/button"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
+        android:text="Facebook"
+        tools:layout_editor_absoluteX="120dp"
+        tools:layout_editor_absoluteY="429dp" />
 
-    <EditText
-        android:id="@+id/etxtcadnomepessoa"
+    <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
-        android:layout_height="42dp"
-        android:layout_marginBottom="304dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="@string/nome"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.346"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imglogo" />
+        android:layout_height="wrap_content"
+        android:text="OU"
+        tools:layout_editor_absoluteX="183dp"
+        tools:layout_editor_absoluteY="394dp" />
 
 </android.support.constraint.ConstraintLayout>
