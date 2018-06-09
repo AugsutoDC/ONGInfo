@@ -139,7 +139,7 @@ public class CadastroEventoActivity extends AppCompatActivity {
 
     public String gerarEventoId()
     {
-        SimpleDateFormat idEvento = new SimpleDateFormat("ddMMyyyyHHmmss");
+        SimpleDateFormat idEvento = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
         String eventoId = idEvento.toString();
         eventoId = eventoId.replace("/","");
         eventoId = eventoId.replace(":","");

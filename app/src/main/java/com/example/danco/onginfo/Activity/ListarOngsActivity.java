@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -32,6 +33,7 @@ public class ListarOngsActivity extends AppCompatActivity {
     private List<Ong> listOng = new ArrayList<Ong>();
     private ArrayAdapter<Ong> arrayAdapterOng;
     Ong ongSelecionado;
+    private Button btnlistongvoltar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +41,7 @@ public class ListarOngsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_listar_ongs);
 
         lvlistongsallongs = findViewById(R.id.lvlistongsallongs);
+        btnlistongvoltar = findViewById(R.id.btnlistongvoltar);
 
         autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
         userId = Base64Custom.codificadorBase64(autenticacao.getCurrentUser().getEmail());
@@ -55,6 +58,13 @@ public class ListarOngsActivity extends AppCompatActivity {
             }
         });
 
+        btnlistongvoltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                voltarTelaMenu();
+            }
+        });
+
     }
 
 
@@ -64,12 +74,12 @@ public class ListarOngsActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 listOng.clear();
-                Toast.makeText(ListarOngsActivity.this, "Entrei no da listview ", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(ListarOngsActivity.this, "Entrei no da listview ", Toast.LENGTH_SHORT).show();
                 for (DataSnapshot objSnapshot:dataSnapshot.getChildren())
                 {
                     Ong ong = objSnapshot.getValue(Ong.class);
                     listOng.add(ong);
-                    Toast.makeText(ListarOngsActivity.this, "For listview " + ong.getNome(), Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(ListarOngsActivity.this, "For listview " + ong.getNome(), Toast.LENGTH_SHORT).show();
                 }
                 arrayAdapterOng = new ArrayAdapter<Ong>(ListarOngsActivity.this,android.R.layout.simple_list_item_1,listOng);
                 ///Toast.makeText(ListarOngsActivity.this, "Sair do for e to no array adapter " , Toast.LENGTH_SHORT).show();
@@ -88,5 +98,11 @@ public class ListarOngsActivity extends AppCompatActivity {
         Intent intentOng = new Intent(ListarOngsActivity.this, InfoOngAvulsoActivity.class);
         intentOng.putExtra("ongId",  ongAtual.getId());
         startActivity(intentOng);
+    }
+
+    public void voltarTelaMenu()
+    {
+        Intent intentMenu = new Intent(ListarOngsActivity.this, StartPerfilActivity.class);
+        startActivity(intentMenu);
     }
 }
