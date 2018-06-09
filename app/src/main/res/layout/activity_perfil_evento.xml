@@ -15,12 +15,13 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="8dp"
         android:text="@string/nome_ong"
         android:textColor="@android:color/black"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtperfileventodata"
+        app:layout_constraintBottom_toTopOf="@+id/txtperfileventotitulo"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -37,24 +38,27 @@
         android:text="@string/data"
         android:textColor="@android:color/black"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView8"
+        app:layout_constraintBottom_toTopOf="@+id/txtperfileventoendereco"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.111" />
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/txtperfileventoendereco"
         android:layout_width="313dp"
         android:layout_height="60dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="196dp"
+        android:layout_marginTop="188dp"
         android:text="@string/endereco"
         android:textColor="@android:color/black"
         android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
@@ -63,20 +67,50 @@
     <ScrollView
         android:id="@+id/scrollView6"
         android:layout_width="313dp"
-        android:layout_height="163dp"
+        android:layout_height="179dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="272dp"
+        android:layout_marginTop="8dp"
+        android:overScrollMode="always"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.698">
 
         <LinearLayout
+            android:id="@+id/scrolid"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="355dp"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="76dp">
+
+            <TextView
+                android:id="@+id/txtperfileventodescricao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:overScrollMode="always"
+                android:scrollHorizontally="true"
+                android:scrollbarAlwaysDrawVerticalTrack="true"
+                android:scrollbarStyle="insideOverlay"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtperfileventoendereco"
+                app:layout_constraintVertical_bias="0.114" />
 
         </LinearLayout>
     </ScrollView>
@@ -92,7 +126,26 @@
         android:layout_marginTop="24dp"
         android:text="@string/voltar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.028"
+        app:layout_constraintHorizontal_bias="0.125"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/scrollView6" />
+
+    <TextView
+        android:id="@+id/txtperfileventotitulo"
+        android:layout_width="313dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="80dp"
+        android:text="@string/titulo"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtperfileventodata"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </android.support.constraint.ConstraintLayout>

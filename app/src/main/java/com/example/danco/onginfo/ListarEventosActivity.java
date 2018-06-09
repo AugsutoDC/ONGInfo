@@ -133,8 +133,9 @@ public class ListarEventosActivity extends AppCompatActivity {
 
     public void abrirEditEvento(Evento eventoAtual)
     {
-        Intent intentEvento = new Intent(ListarEventosActivity.this, CadastroEventoActivity.class);
+        Intent intentEvento = new Intent(ListarEventosActivity.this, PerfilEventoActivity.class);
         intentEvento.putExtra("eventoId",  eventoAtual.getId());
+        intentEvento.putExtra("ongId",  ong.getId());
         startActivity(intentEvento);
     }
 }

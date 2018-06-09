@@ -41,7 +41,7 @@ public class Ong {
     }
 
     public String toString() {
-        return nome.toUpperCase() + " \n  " + local;
+        return nome.toUpperCase() + " \n  " + telefone;
     }
 
     public String getId() {
