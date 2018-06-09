@@ -9,6 +9,7 @@ public class Evento {
     private String descricao;
     private String data;
     private String endereco;
+    private String titulo;
 
     public Evento() {
     }
@@ -19,7 +20,7 @@ public class Evento {
     }
 
     public String toString() {
-        return descricao + " - " + data;
+        return titulo + " - " + data;
     }
 
     public String getId() {
@@ -61,4 +62,8 @@ public class Evento {
     public void setOngId(String ongId) {
         this.ongId = ongId;
     }
+
+    public String getTitulo() { return titulo; }
+
+    public void setTitulo(String titulo) { this.titulo = titulo; }
 }

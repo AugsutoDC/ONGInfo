@@ -1,11 +1,15 @@
 package com.example.danco.onginfo.Activity;
 
+import android.content.Intent;
+import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -37,9 +41,9 @@ public class PerfilOngActivity extends AppCompatActivity {
     private ListView lvperfilonglistview;
     private List<Evento> listEvento = new ArrayList<Evento>();
     private ArrayAdapter<Evento> arrayAdapterEvento;
-
+    private ImageView imgperfilongaddevento;
     DatabaseReference firebaseDatabase;
-
+    Evento eventoSelecionado;
 
 
     @Override
@@ -53,6 +57,7 @@ public class PerfilOngActivity extends AppCompatActivity {
         etxtperfilonglocal = findViewById(R.id.etxtperfilonglocal);
         btnperfilongsalvar = findViewById(R.id.btnperfilongsalvar);
         lvperfilonglistview = findViewById(R.id.lvperfilonglistview);
+        imgperfilongaddevento = findViewById(R.id.imgperfilongaddevento);
 
         autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
         userId = Base64Custom.codificadorBase64(autenticacao.getCurrentUser().getEmail());
@@ -61,6 +66,28 @@ public class PerfilOngActivity extends AppCompatActivity {
 
         getDadosPerfil();
 
+        lvperfilonglistview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                eventoSelecionado = (Evento)parent.getItemAtPosition(position);
+                abrirEditEvento(eventoSelecionado);
+            }
+        });
+        /*
+        lvperfilonglistview.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                eventoSelecionado = (Evento)parent.getItemAtPosition(position);
+                Toast.makeText(PerfilOngActivity.this, "Evento selecionado: " + eventoSelecionado.getTitulo(), Toast.LENGTH_SHORT).show();
+                abrirEditEvento(eventoSelecionado);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+        */
 
         btnperfilongsalvar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,8 +99,21 @@ public class PerfilOngActivity extends AppCompatActivity {
         });
        //// ong.setNome(databaseReference.child("nome").getDatabase().toString());
 
+        imgperfilongaddevento.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentong = new Intent(PerfilOngActivity.this, CadastroEventoActivity.class);
+                startActivity(intentong);
+            }
+        });
 
+    }
 
+    public void abrirEditEvento(Evento eventoAtual)
+    {
+        Intent intentEvento = new Intent(PerfilOngActivity.this, CadastroEventoActivity.class);
+        intentEvento.putExtra("eventoId",  eventoAtual.getId());
+        startActivity(intentEvento);
     }
 
     public void getDadosPerfil()
@@ -82,7 +122,7 @@ public class PerfilOngActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 ong = dataSnapshot.getValue(Ong.class);
-                Toast.makeText(PerfilOngActivity.this, "Nome: " + ong.getNome(), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(PerfilOngActivity.this, "Nome: " + ong.getNome(), Toast.LENGTH_SHORT).show();
 
                 ong.setId(userId.toString());
 

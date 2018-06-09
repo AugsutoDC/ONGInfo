@@ -54,19 +54,20 @@
         <activity
             android:name=".Activity.LoginOngActivity"
             android:label="@string/title_activity_start_perfil"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Activity.CadastroOngActivity"
             android:label="@string/title_activity_start_perfil"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Activity.TelaPrincipalActivity"
             android:label="@string/title_activity_start_perfil"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Activity.PerfilOngActivity"
             android:label="@string/title_activity_start_perfil"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Activity.CadastroEventoActivity"></activity>
     </application>
 
 </manifest>

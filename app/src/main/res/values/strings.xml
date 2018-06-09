@@ -29,4 +29,7 @@
     <string name="salvar">Salvar</string>
     <string name="editar">Editar</string>
     <string name="perfil">Perfil</string>
+    <string name="add_evento">Adicionar evento</string>
+    <string name="titulo">Título</string>
+    <string name="eventos">Eventos</string>
 </resources>
