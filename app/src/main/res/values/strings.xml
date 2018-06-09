@@ -32,4 +32,6 @@
     <string name="add_evento">Adicionar evento</string>
     <string name="titulo">Título</string>
     <string name="eventos">Eventos</string>
+    <string name="remover">Remover</string>
+    <string name="todas_ongs">Todas as Ongs</string>
 </resources>

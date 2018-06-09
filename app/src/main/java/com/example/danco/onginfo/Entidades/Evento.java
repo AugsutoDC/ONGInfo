@@ -63,7 +63,11 @@ public class Evento {
         this.ongId = ongId;
     }
 
-    public String getTitulo() { return titulo; }
+    public String getTitulo() {
+        return titulo;
+    }
 
-    public void setTitulo(String titulo) { this.titulo = titulo; }
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
 }

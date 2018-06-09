@@ -42,6 +42,10 @@ public class Ong {
         return hashMapOng;
     }
 
+    public String toString() {
+        return nome + " \n  " + local;
+    }
+
     public String getId() {
         return id;
     }

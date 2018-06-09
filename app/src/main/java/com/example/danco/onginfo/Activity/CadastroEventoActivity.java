@@ -1,11 +1,14 @@
 package com.example.danco.onginfo.Activity;
 
 import android.content.Intent;
+import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Layout;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.danco.onginfo.DAO.ConfiguracaoFirebase;
@@ -33,7 +36,8 @@ public class CadastroEventoActivity extends AppCompatActivity {
     private FirebaseAuth autenticacao;
     private String userId;
     DatabaseReference firebaseDatabase;
-
+    ConstraintLayout cadeventolayer;
+    private ImageButton ibtncadeventoremover;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +50,10 @@ public class CadastroEventoActivity extends AppCompatActivity {
         etxtcadeventodescricao = findViewById(R.id.etxtcadeventodescricao);
         btncadeventovoltar = findViewById(R.id.btncadeventovoltar);
         btncadeventosalvar = findViewById(R.id.btncadeventosalvar);
+        cadeventolayer = findViewById(R.id.cadeventolayer);
+        ibtncadeventoremover = findViewById(R.id.ibtncadeventoremover);
+
+        cadeventolayer.setVisibility(View.GONE);
 
         //Pegando o firebase e o id da ong logada
         autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
@@ -65,6 +73,8 @@ public class CadastroEventoActivity extends AppCompatActivity {
                     etxtcadeventotitulo.setText(evento.getTitulo());
                     etxtcadeventoendereco.setText(evento.getEndereco());
                     etxtcadeventodescricao.setText(evento.getDescricao());
+
+                    cadeventolayer.setVisibility(View.VISIBLE);
                 }
 
                 @Override
@@ -89,6 +99,14 @@ public class CadastroEventoActivity extends AppCompatActivity {
                 evento = new Evento();
                 salvarEvento();
                 retornarPerfil();
+            }
+        });
+
+        ibtncadeventoremover.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Toast.makeText(CadastroEventoActivity.this, "Entrei no evento de click ", Toast.LENGTH_SHORT).show();
+                removerEvento();
             }
         });
     }
@@ -129,5 +147,12 @@ public class CadastroEventoActivity extends AppCompatActivity {
         eventoId = Base64Custom.codificadorBase64(eventoId);
 
         return eventoId;
+    }
+
+    public void removerEvento()
+    {
+        evento.setOngId(userId);
+        firebaseDatabase.child("eventos").child(evento.getOngId()).child(evento.getId()).removeValue();
+        retornarPerfil();
     }
 }
