@@ -6,97 +6,172 @@
     android:layout_height="match_parent"
     tools:context=".Activity.PerfilOngActivity">
 
-    <TextView
-        android:id="@+id/etxteditnomeong"
-        android:layout_width="218dp"
-        android:layout_height="41dp"
-        android:contentDescription="@string/nome_ong"
-        android:text="Nome da ONG"
-        tools:layout_editor_absoluteX="83dp"
-        tools:layout_editor_absoluteY="31dp" />
-
-    <TextView
-        android:id="@+id/etxteditsobreong"
-        android:layout_width="324dp"
-        android:layout_height="56dp"
-        android:text="Sobre:"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="120dp" />
-
-    <TextView
-        android:id="@+id/etxteditsedeOng"
-        android:layout_width="323dp"
-        android:layout_height="56dp"
-        android:text="Sede(s):"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="252dp" />
-
-    <TextView
-        android:id="@+id/etxteditcontatoOng"
-        android:layout_width="324dp"
-        android:layout_height="59dp"
-        android:text="Contato:"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="184dp" />
-
-    <TextView
-        android:id="@+id/etxtediteventoOng"
-        android:layout_width="323dp"
-        android:layout_height="21dp"
-        android:text="Evento(s):"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="319dp" />
-
-    <ScrollView
-        android:layout_width="323dp"
-        android:layout_height="132dp"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="340dp">
-
-        <LinearLayout
-            android:id="@+id/LinearLayoutEvents"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal" />
-    </ScrollView>
-
     <ImageView
         android:id="@+id/imageeditsobre"
         android:layout_width="29dp"
         android:layout_height="19dp"
-        app:srcCompat="@android:drawable/ic_menu_edit"
-        tools:layout_editor_absoluteX="325dp"
-        tools:layout_editor_absoluteY="120dp" />
+        android:layout_marginBottom="36dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:contentDescription="@string/editar"
+        app:layout_constraintBottom_toBottomOf="@+id/etxtperfilongsobre3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.972"
+        app:layout_constraintStart_toStartOf="@+id/etxtperfilongsobre3"
+        app:layout_constraintTop_toTopOf="@+id/etxtperfilongsobre3"
+        app:srcCompat="@android:drawable/ic_menu_edit" />
 
     <ImageView
         android:id="@+id/imageeditcontato"
         android:layout_width="29dp"
         android:layout_height="19dp"
-        app:srcCompat="@android:drawable/ic_menu_edit"
-        tools:layout_editor_absoluteX="325dp"
-        tools:layout_editor_absoluteY="184dp" />
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:contentDescription="@string/editar"
+        app:layout_constraintBottom_toBottomOf="@+id/etxtperfilongtelefone3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.972"
+        app:layout_constraintStart_toStartOf="@+id/etxtperfilongtelefone3"
+        app:layout_constraintTop_toTopOf="@+id/etxtperfilongtelefone3"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@android:drawable/ic_menu_edit" />
 
     <ImageView
         android:id="@+id/imageeditsede"
         android:layout_width="29dp"
         android:layout_height="19dp"
-        app:srcCompat="@android:drawable/ic_menu_edit"
-        tools:layout_editor_absoluteX="325dp"
-        tools:layout_editor_absoluteY="252dp" />
-
-    <ImageView
-        android:id="@+id/imageeditevento"
-        android:layout_width="29dp"
-        android:layout_height="19dp"
-        app:srcCompat="@android:drawable/ic_menu_edit"
-        tools:layout_editor_absoluteX="325dp"
-        tools:layout_editor_absoluteY="319dp" />
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:contentDescription="@string/editar"
+        app:layout_constraintBottom_toBottomOf="@+id/etxtperfilonglocal3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.972"
+        app:layout_constraintStart_toStartOf="@+id/etxtperfilonglocal3"
+        app:layout_constraintTop_toTopOf="@+id/etxtperfilonglocal3"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@android:drawable/ic_menu_edit" />
 
     <ImageView
         android:id="@+id/imageeditnomeong"
         android:layout_width="29dp"
         android:layout_height="19dp"
-        app:srcCompat="@android:drawable/ic_menu_edit"
-        tools:layout_editor_absoluteX="272dp"
-        tools:layout_editor_absoluteY="31dp" />
+        android:layout_marginBottom="28dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="288dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="288dp"
+        android:contentDescription="@string/editar"
+        app:layout_constraintBottom_toBottomOf="@+id/etxtperfilongnome3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/etxtperfilongnome3"
+        app:layout_constraintTop_toTopOf="@+id/etxtperfilongnome3"
+        app:srcCompat="@android:drawable/ic_menu_edit" />
+
+    <EditText
+        android:id="@+id/etxtperfilongnome3"
+        android:layout_width="317dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/nome_ong"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.703"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.04" />
+
+    <EditText
+        android:id="@+id/etxtperfilongsobre3"
+        android:layout_width="320dp"
+        android:layout_height="58dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/sobre"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxtperfilongnome3"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/etxtperfilongtelefone3"
+        android:layout_width="318dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/telefone"
+        android:inputType="phone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.692"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxtperfilongsobre3"
+        app:layout_constraintVertical_bias="0.021" />
+
+    <EditText
+        android:id="@+id/etxtperfilonglocal3"
+        android:layout_width="317dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:ems="10"
+        android:hint="@string/localizacao"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.703"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxtperfilongtelefone3"
+        app:layout_constraintVertical_bias="0.072" />
+
+    <Button
+        android:id="@+id/btnperfilongsalvar3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/salvar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.968"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxtperfilonglocal3"
+        app:layout_constraintVertical_bias="0.524" />
+
 </android.support.constraint.ConstraintLayout>

@@ -4,6 +4,7 @@ import com.example.danco.onginfo.DAO.ConfiguracaoFirebase;
 import com.google.firebase.database.DatabaseReference;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Ong {
@@ -11,6 +12,11 @@ public class Ong {
     private String email;
     private String senha;
     private String nome;
+    private String cpf;
+    private String local;
+    private String telefone;
+    private String sobre;
+
 
     public Ong() {
     }
@@ -27,6 +33,11 @@ public class Ong {
         hashMapOng.put("email", getEmail());
         hashMapOng.put("senha", getSenha());
         hashMapOng.put("nome", getNome());
+        hashMapOng.put("cpf", getCpf());
+        hashMapOng.put("local", getLocal());
+        hashMapOng.put("telefone", getTelefone());
+        hashMapOng.put("sobre", getSobre());
+
 
         return hashMapOng;
     }
@@ -62,4 +73,21 @@ public class Ong {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
+    public String getCpf() { return cpf; }
+
+    public void setCpf(String cpf) {this.cpf = cpf; }
+
+    public String getLocal() { return local; }
+
+    public void setLocal(String local) { this.local = local; }
+
+    public String getTelefone() { return telefone; }
+
+    public void setTelefone(String telefone) { this.telefone = telefone; }
+
+    public String getSobre() { return sobre; }
+
+    public void setSobre(String sobre) { this.sobre = sobre; }
+
 }

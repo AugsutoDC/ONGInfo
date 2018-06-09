@@ -10,57 +10,81 @@
         android:id="@+id/etxtlabnomeong"
         android:layout_width="218dp"
         android:layout_height="41dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:contentDescription="@string/nome_ong"
         android:text="Nome da ONG"
-        tools:layout_editor_absoluteX="79dp"
-        tools:layout_editor_absoluteY="31dp" />
-
-    <ImageButton
-        android:id="@+id/imgBttParticipar"
-        android:layout_width="52dp"
-        android:layout_height="48dp"
-        android:background="@drawable/holdHands"
-        app:srcCompat="@color/common_google_signin_btn_text_light_disabled"
-        tools:layout_editor_absoluteX="317dp"
-        tools:layout_editor_absoluteY="16dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/etxteditsobreong"
+        android:id="@+id/etxtcademailpessoa"
         android:layout_width="324dp"
         android:layout_height="56dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="Sobre:"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="120dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxtlabnomeong" />
 
     <TextView
         android:id="@+id/etxtsedeOng"
         android:layout_width="323dp"
         android:layout_height="56dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="Sede(s):"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="252dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxtcontatoOng" />
 
     <TextView
         android:id="@+id/etxtcontatoOng"
         android:layout_width="324dp"
         android:layout_height="59dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="Contato:"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="184dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxtcademailpessoa" />
 
     <TextView
         android:id="@+id/etxtlabeventoOng"
         android:layout_width="323dp"
         android:layout_height="21dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="Evento(s):"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="319dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxtsedeOng" />
 
     <ScrollView
         android:layout_width="323dp"
         android:layout_height="132dp"
-        tools:layout_editor_absoluteX="31dp"
-        tools:layout_editor_absoluteY="340dp">
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etxtlabeventoOng">
 
         <LinearLayout
             android:id="@+id/LinearLayoutEvents"

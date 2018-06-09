@@ -21,31 +21,52 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.LoginPessoaActivity">
+        <activity
+            android:name=".Activity.LoginPessoaActivity"
+            android:label="@string/title_activity_start_perfil"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.CadastroPessoaActivity">
+        <activity
+            android:name=".Activity.CadastroPessoaActivity"
+            android:label="@string/title_activity_start_perfil"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.MainActivity">
+        <activity
+            android:name=".Activity.MainActivity"
+            android:label="@string/title_activity_start_perfil"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.LoginOngActivity" />
-        <activity android:name=".Activity.CadastroOngActivity" />
-        <activity android:name=".Activity.TelaPrincipalActivity" />
-        <activity android:name=".Activity.PerfilOngActivity" />
+        <activity
+            android:name=".Activity.LoginOngActivity"
+            android:label="@string/title_activity_start_perfil"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".Activity.CadastroOngActivity"
+            android:label="@string/title_activity_start_perfil"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".Activity.TelaPrincipalActivity"
+            android:label="@string/title_activity_start_perfil"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".Activity.PerfilOngActivity"
+            android:label="@string/title_activity_start_perfil"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

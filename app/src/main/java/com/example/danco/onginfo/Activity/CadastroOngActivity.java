@@ -34,6 +34,8 @@ public class CadastroOngActivity extends AppCompatActivity {
     private Button btncadcancelarong;
     private Ong ong;
     private FirebaseAuth autenticacao;
+    private EditText etxtcadcnpjong;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +49,7 @@ public class CadastroOngActivity extends AppCompatActivity {
         etxtcadconfirmarsenhaong = findViewById(R.id.etxtcadconfirmarsenhaong);
         btncadconfirmarong = findViewById(R.id.btncadconfirmarong);
         btncadcancelarong = findViewById(R.id.btncadcancelarong);
+        etxtcadcnpjong = findViewById(R.id.etxtcadcnpjong);
 
         btncadcancelarong.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,12 +64,13 @@ public class CadastroOngActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(CadastroOngActivity.this,"Nome: " + etxtcadnomeong.getText().toString() + "Email: " + etxtcademailong.getText().toString() + "Senha: " + etxtcadsenhaong.getText().toString(), Toast.LENGTH_SHORT).show();
                 if(etxtcadsenhaong.getText().toString().equals(etxtcadconfirmarsenhaong.getText().toString())){
-                    Toast.makeText(CadastroOngActivity.this,"Nome: " + etxtcadnomeong.getText().toString() + "Email: " + etxtcademailong.getText().toString() + "Senha: " + etxtcadsenhaong.getText().toString(), Toast.LENGTH_SHORT).show();
+
                     ong = new Ong();
                     ong.setNome(etxtcadnomeong.getText().toString());
                     ong.setEmail(etxtcademailong.getText().toString());
                     ong.setSenha(etxtcadsenhaong.getText().toString());
-                    Toast.makeText(CadastroOngActivity.this,"Nome: " + ong.getNome() + "Email: " + ong.getEmail() + "Senha: " + ong.getSenha(), Toast.LENGTH_SHORT).show();
+                    ong.setCpf(etxtcadcnpjong.getText().toString());
+
                     cadastrarOng();
 
                 }else{

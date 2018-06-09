@@ -14,13 +14,14 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="16dp"
-        android:background="@drawable/logo"
+        android:background="@drawable/onginfo"
         android:contentDescription="@string/logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.036" />
 
     <EditText
         android:id="@+id/etxtloginemailong"
@@ -40,20 +41,20 @@
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        app:layout_constraintVertical_bias="0.521" />
+        app:layout_constraintVertical_bias="0.706" />
 
     <EditText
         android:id="@+id/etxtloginsenhaong"
         android:layout_width="wrap_content"
         android:layout_height="42dp"
-        android:layout_marginBottom="44dp"
+        android:layout_marginBottom="60dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:ems="10"
         android:hint="@string/senha"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         app:layout_constraintBottom_toTopOf="@+id/btnsenhaperdidaong"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
@@ -63,29 +64,35 @@
         android:id="@+id/btnsenhaperdidaong"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginTop="332dp"
+        android:layout_marginTop="288dp"
         android:text="@string/esqueceu_senha"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.075"
+        app:layout_constraintHorizontal_bias="0.137"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.144" />
 
     <Button
         android:id="@+id/btnnewloginong"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="52dp"
         android:text="@string/primeiro_acesso"
+        app:layout_constraintBottom_toTopOf="@+id/btnlogarong"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.295"
+        app:layout_constraintHorizontal_bias="0.272"
         app:layout_constraintStart_toEndOf="@+id/btnsenhaperdidaong"
-        app:layout_constraintTop_toBottomOf="@+id/etxtloginsenhaong" />
+        app:layout_constraintTop_toBottomOf="@+id/etxtloginsenhaong"
+        app:layout_constraintVertical_bias="0.108" />
 
     <Button
         android:id="@+id/btnlogarong"

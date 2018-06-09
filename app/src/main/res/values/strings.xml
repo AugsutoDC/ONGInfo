@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">ONGInfo</string>
-    <string name="title_activity_start_perfil">Selecione o perfil</string>
+    <!--string name="title_activity_start_perfil">Selecione o perfil</string-->
+    <string name="title_activity_start_perfil">ONGInfo</string>
     <string name="listar_ongs">Listar ONG\'s</string>
     <string name="ong">ONG</string>
     <string name="pessoa">Pessoa</string>
@@ -17,4 +18,15 @@
     <string name="nome">Nome</string>
     <string name="logo">Logo</string>
     <string name="title_activity_perfil_ongs">PerfilOngsActivity</string>
+    <string name="voltar">Voltar</string>
+    <string name="descricao">Descrição</string>
+    <string name="data">Data</string>
+    <string name="endereco">Endereço</string>
+    <string name="sobre">Sobre</string>
+    <string name="telefone">Telefone</string>
+    <string name="sede">Sede</string>
+    <string name="localizacao">Localização</string>
+    <string name="salvar">Salvar</string>
+    <string name="editar">Editar</string>
+    <string name="perfil">Perfil</string>
 </resources>

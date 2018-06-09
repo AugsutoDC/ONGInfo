@@ -19,10 +19,10 @@
         android:text="@string/cancelar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.282"
+        app:layout_constraintHorizontal_bias="0.257"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etxtcadconfirmarsenhapessoa"
-        app:layout_constraintVertical_bias="0.125" />
+        app:layout_constraintVertical_bias="0.322" />
 
     <Button
         android:id="@+id/btncadconfirmarpessoa"
@@ -37,27 +37,30 @@
         android:text="@string/confirmar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.258"
+        app:layout_constraintHorizontal_bias="0.297"
         app:layout_constraintStart_toEndOf="@+id/btncadcancelarpessoa"
         app:layout_constraintTop_toBottomOf="@+id/etxtcadconfirmarsenhapessoa"
-        app:layout_constraintVertical_bias="0.125" />
+        app:layout_constraintVertical_bias="0.322" />
 
     <EditText
-        android:id="@+id/etxteditsobreong"
+        android:id="@+id/etxtcademailpessoa"
         android:layout_width="wrap_content"
         android:layout_height="42dp"
-        android:layout_marginBottom="336dp"
+        android:layout_marginBottom="320dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/email"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imglogo"
+        app:layout_constraintVertical_bias="0.822" />
 
     <EditText
         android:id="@+id/etxtloginsenhapessoa"
@@ -76,8 +79,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxteditsobreong"
-        app:layout_constraintVertical_bias="0.027" />
+        app:layout_constraintTop_toBottomOf="@+id/etxtcademailpessoa"
+        app:layout_constraintVertical_bias="0.064" />
 
     <EditText
         android:id="@+id/etxtcadconfirmarsenhapessoa"
@@ -97,7 +100,7 @@
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etxtloginsenhapessoa"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.06" />
 
     <ImageView
         android:id="@+id/imglogo"
@@ -115,31 +118,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.032"
-        app:srcCompat="@drawable/logo" />
+        app:srcCompat="@drawable/onginfo" />
 
-    <View
-        android:id="@+id/divider"
-        android:layout_width="350dp"
-        android:layout_height="20dp"
-        android:background="?android:attr/listDivider"
-        android:visibility="visible"
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="394dp" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="144dp"
-        android:layout_height="wrap_content"
-        android:text="Facebook"
-        tools:layout_editor_absoluteX="120dp"
-        tools:layout_editor_absoluteY="429dp" />
-
-    <TextView
-        android:id="@+id/textView2"
+    <EditText
+        android:id="@+id/etxtcadnomepessoa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="OU"
-        tools:layout_editor_absoluteX="183dp"
-        tools:layout_editor_absoluteY="394dp" />
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="Nome"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/etxtcademailpessoa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imglogo" />
 
 </android.support.constraint.ConstraintLayout>
