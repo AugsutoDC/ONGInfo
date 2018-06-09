@@ -10,33 +10,39 @@
         android:id="@+id/imglogo2"
         android:layout_width="104dp"
         android:layout_height="80dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="28dp"
         android:contentDescription="@string/logo"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/onginfo" />
 
     <EditText
         android:id="@+id/etxtcadnomeong"
         android:layout_width="wrap_content"
         android:layout_height="42dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="56dp"
         android:ems="10"
         android:hint="@string/nome_ong"
         android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/etxtcadsenhaong"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imglogo2" />
+        app:layout_constraintTop_toBottomOf="@+id/imglogo2"
+        app:layout_constraintVertical_bias="0.357" />
 
     <EditText
         android:id="@+id/etxtcadconfirmarsenhaong"
@@ -56,7 +62,7 @@
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etxtcadsenhaong"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.017" />
 
     <EditText
         android:id="@+id/etxtcadsenhaong"
@@ -67,7 +73,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/senha"
         android:inputType="textPassword"
@@ -75,8 +81,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxtcadnomeong"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/imglogo2"
+        app:layout_constraintVertical_bias="0.305" />
 
     <Button
         android:id="@+id/btncadcancelarong"
@@ -84,33 +90,35 @@
         android:layout_height="50dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginLeft="64dp"
+        android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
-        android:layout_marginStart="64dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/cancelar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintHorizontal_bias="0.1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxtcadcnpjong" />
+        app:layout_constraintTop_toBottomOf="@+id/etxtcademailong"
+        app:layout_constraintVertical_bias="0.497" />
 
     <Button
         android:id="@+id/btncadconfirmarong"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="76dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginRight="76dp"
+        android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/confirmar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.769"
         app:layout_constraintStart_toEndOf="@+id/btncadcancelarong"
-        app:layout_constraintTop_toBottomOf="@+id/etxtcadcnpjong" />
+        app:layout_constraintTop_toBottomOf="@+id/etxtcademailong"
+        app:layout_constraintVertical_bias="0.497" />
 
     <EditText
         android:id="@+id/etxtcademailong"
@@ -130,26 +138,7 @@
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etxtcadconfirmarsenhaong"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <EditText
-        android:id="@+id/etxtcadcnpjong"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:ems="10"
-        android:hint="CNPJ"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxtcademailong"
-        app:layout_constraintVertical_bias="0.068" />
+        app:layout_constraintVertical_bias="0.067" />
 
 
 </android.support.constraint.ConstraintLayout>

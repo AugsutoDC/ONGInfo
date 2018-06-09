@@ -54,7 +54,9 @@
             android:label="@string/title_activity_start_perfil"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Activity.ListarOngsActivity" />
-        <activity android:name=".Activity.InfoOngAvulsoActivity"></activity>
+        <activity android:name=".Activity.InfoOngAvulsoActivity" />
+        <activity android:name=".ListarEventosActivity" />
+        <activity android:name=".PerfilEventoActivity"></activity>
     </application>
 
 </manifest>

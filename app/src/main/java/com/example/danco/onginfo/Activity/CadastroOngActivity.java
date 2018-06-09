@@ -34,7 +34,7 @@ public class CadastroOngActivity extends AppCompatActivity {
     private Button btncadcancelarong;
     private Ong ong;
     private FirebaseAuth autenticacao;
-    private EditText etxtcadcnpjong;
+
 
 
     @Override
@@ -49,7 +49,7 @@ public class CadastroOngActivity extends AppCompatActivity {
         etxtcadconfirmarsenhaong = findViewById(R.id.etxtcadconfirmarsenhaong);
         btncadconfirmarong = findViewById(R.id.btncadconfirmarong);
         btncadcancelarong = findViewById(R.id.btncadcancelarong);
-        etxtcadcnpjong = findViewById(R.id.etxtcadcnpjong);
+
 
         btncadcancelarong.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,7 +69,7 @@ public class CadastroOngActivity extends AppCompatActivity {
                     ong.setNome(etxtcadnomeong.getText().toString());
                     ong.setEmail(etxtcademailong.getText().toString());
                     ong.setSenha(etxtcadsenhaong.getText().toString());
-                    ong.setCpf(etxtcadcnpjong.getText().toString());
+
 
                     cadastrarOng();
 
@@ -113,7 +113,7 @@ public class CadastroOngActivity extends AppCompatActivity {
                     }catch (FirebaseAuthUserCollisionException e){
                         errorExcecao = " Esse e-mail já está cadastrado no sistema";
                     }catch (Exception e){
-                        errorExcecao = " Err ao efetuar o cadastro!";
+                        errorExcecao = " Erro ao efetuar o cadastro!";
                         e.printStackTrace();
                     }
                     Toast.makeText(CadastroOngActivity.this, "Erro: " + errorExcecao, Toast.LENGTH_LONG).show();

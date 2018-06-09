@@ -11,6 +11,7 @@ import com.example.danco.onginfo.DAO.ConfiguracaoFirebase;
 import com.example.danco.onginfo.Entidades.Evento;
 import com.example.danco.onginfo.Entidades.Ong;
 import com.example.danco.onginfo.Helper.Base64Custom;
+import com.example.danco.onginfo.ListarEventosActivity;
 import com.example.danco.onginfo.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -29,6 +30,7 @@ public class InfoOngAvulsoActivity extends AppCompatActivity {
     private String userId;
     DatabaseReference firebaseDatabase;
     private Ong ong;
+    private Button btninfoongeventos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +42,7 @@ public class InfoOngAvulsoActivity extends AppCompatActivity {
         txtinfoonglocal = findViewById(R.id.txtinfoonglocal);
         txtinfoongsobre = findViewById(R.id.txtinfoongsobre);
         btninfoongvoltar = findViewById(R.id.btninfoongvoltar);
+        btninfoongeventos = findViewById(R.id.btninfoongeventos);
 
         //Pegando o firebase e o id da ong logada
         autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
@@ -75,11 +78,25 @@ public class InfoOngAvulsoActivity extends AppCompatActivity {
                 voltarListaOngs();
             }
         });
+
+        btninfoongeventos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                verListaEventos();
+            }
+        });
     }
 
     public void voltarListaOngs()
     {
         Intent intentOng = new Intent(InfoOngAvulsoActivity.this, ListarOngsActivity.class);
         startActivity(intentOng);
+    }
+
+    public void verListaEventos()
+    {
+        Intent intentEvento = new Intent(InfoOngAvulsoActivity.this, ListarEventosActivity.class);
+        intentEvento.putExtra("ongId",  ong.getId());
+        startActivity(intentEvento);
     }
 }

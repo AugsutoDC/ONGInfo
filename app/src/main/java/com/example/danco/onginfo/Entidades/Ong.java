@@ -12,7 +12,6 @@ public class Ong {
     private String email;
     private String senha;
     private String nome;
-    private String cpf;
     private String local;
     private String telefone;
     private String sobre;
@@ -33,7 +32,6 @@ public class Ong {
         hashMapOng.put("email", getEmail());
         hashMapOng.put("senha", getSenha());
         hashMapOng.put("nome", getNome());
-        hashMapOng.put("cpf", getCpf());
         hashMapOng.put("local", getLocal());
         hashMapOng.put("telefone", getTelefone());
         hashMapOng.put("sobre", getSobre());
@@ -43,7 +41,7 @@ public class Ong {
     }
 
     public String toString() {
-        return nome + " \n  " + local;
+        return nome.toUpperCase() + " \n  " + local;
     }
 
     public String getId() {
@@ -77,10 +75,6 @@ public class Ong {
     public void setNome(String nome) {
         this.nome = nome;
     }
-
-    public String getCpf() { return cpf; }
-
-    public void setCpf(String cpf) {this.cpf = cpf; }
 
     public String getLocal() { return local; }
 
