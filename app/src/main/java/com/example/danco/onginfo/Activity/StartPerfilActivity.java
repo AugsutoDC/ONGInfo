@@ -1,10 +1,13 @@
 package com.example.danco.onginfo.Activity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toolbar;
 
 import com.example.danco.onginfo.R;
 import com.google.firebase.auth.FirebaseAuth;
@@ -16,6 +19,8 @@ public class StartPerfilActivity extends AppCompatActivity {
     private FirebaseAuth autenticacao;
     private Button btnverongs;
 
+
+    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +31,10 @@ public class StartPerfilActivity extends AppCompatActivity {
         btnong = findViewById(R.id.btnloginong);
         btnpessoa = findViewById(R.id.btnloginpessoa);
         btnverongs = findViewById(R.id.btnverongs);
+
+
+
+
 
         btnong.setOnClickListener(new View.OnClickListener() {
             @Override

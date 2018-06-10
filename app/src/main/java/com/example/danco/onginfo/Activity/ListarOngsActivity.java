@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.example.danco.onginfo.DAO.ConfiguracaoFirebase;
 import com.example.danco.onginfo.Entidades.Evento;
@@ -36,6 +37,7 @@ public class ListarOngsActivity extends AppCompatActivity {
     private Button btnlistongvoltar;
     int pessoaPerfil;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +45,10 @@ public class ListarOngsActivity extends AppCompatActivity {
 
         lvlistongsallongs = findViewById(R.id.lvlistongsallongs);
         btnlistongvoltar = findViewById(R.id.btnlistongvoltar);
+        toolbarInfoOng = findViewById(R.id.toolbar_info_ong);
+
+
+
 
         autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
         ////userId = Base64Custom.codificadorBase64(autenticacao.getCurrentUser().getEmail());

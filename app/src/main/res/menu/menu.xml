@@ -3,5 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:title="Sair" />
+    <item android:title="@string/sair"
+        android:id="@+id/action_sair"
+        android:orderInCategory="100"
+        app:showAsAction="never"/>
 </menu>

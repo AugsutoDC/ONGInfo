@@ -8,6 +8,8 @@
     tools:context=".Activity.StartPerfilActivity"
     tools:showIn="@layout/activity_start_perfil">
 
+
+
     <TextView
         android:id="@+id/txtescolhaperfil"
         android:layout_width="108dp"
@@ -27,7 +29,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.015" />
+        app:layout_constraintVertical_bias="0.129" />
 
     <Button
         android:id="@+id/btnloginong"
@@ -42,7 +44,7 @@
         android:text="@string/ong"
         app:layout_constraintBottom_toTopOf="@+id/btnverongs"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.171"
+        app:layout_constraintHorizontal_bias="0.25"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4"
         app:layout_constraintVertical_bias="0.843" />
@@ -60,8 +62,8 @@
         android:text="@string/pessoa"
         app:layout_constraintBottom_toTopOf="@+id/btnverongs"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.551"
-        app:layout_constraintStart_toEndOf="@+id/btnloginong"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4"
         app:layout_constraintVertical_bias="0.83" />
 
@@ -96,7 +98,6 @@
         android:contentDescription="@string/logo"
         app:layout_constraintBottom_toTopOf="@+id/btnverongs"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.445"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtescolhaperfil"
         app:layout_constraintVertical_bias="0.099" />
