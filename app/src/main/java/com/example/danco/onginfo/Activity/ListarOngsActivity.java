@@ -31,7 +31,7 @@ public class ListarOngsActivity extends AppCompatActivity {
     DatabaseReference firebaseDatabase;
     private FirebaseAuth autenticacao;
     private String userId;
-    private List<Ong> listOng = new ArrayList<Ong>();
+    private List<Ong> listOng = new ArrayList<>();
     private ArrayAdapter<Ong> arrayAdapterOng;
     Ong ongSelecionado;
     private Button btnlistongvoltar;
@@ -45,8 +45,6 @@ public class ListarOngsActivity extends AppCompatActivity {
 
         lvlistongsallongs = findViewById(R.id.lvlistongsallongs);
         btnlistongvoltar = findViewById(R.id.btnlistongvoltar);
-        toolbarInfoOng = findViewById(R.id.toolbar_info_ong);
-
 
 
 
@@ -102,7 +100,7 @@ public class ListarOngsActivity extends AppCompatActivity {
                     listOng.add(ong);
                     //Toast.makeText(ListarOngsActivity.this, "For listview " + ong.getNome(), Toast.LENGTH_SHORT).show();
                 }
-                arrayAdapterOng = new ArrayAdapter<Ong>(ListarOngsActivity.this,android.R.layout.simple_list_item_1,listOng);
+                arrayAdapterOng = new ArrayAdapter<>(ListarOngsActivity.this, android.R.layout.simple_list_item_1, listOng);
                 ///Toast.makeText(ListarOngsActivity.this, "Sair do for e to no array adapter " , Toast.LENGTH_SHORT).show();
                 lvlistongsallongs.setAdapter(arrayAdapterOng);
             }
