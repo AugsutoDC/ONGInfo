@@ -79,6 +79,7 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/scrollView7"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.347"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ScrollView
@@ -204,7 +205,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="336dp"
-        android:overScrollMode="always"
+        android:overScrollMode="ifContentScrolls"
         app:layout_constraintBottom_toTopOf="@+id/btninfoongvoltar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.516"

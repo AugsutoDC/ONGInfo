@@ -8,26 +8,6 @@
 
 
     <EditText
-        android:id="@+id/etxtcadeventodata"
-        android:layout_width="313dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="84dp"
-        android:ems="10"
-        android:hint="@string/data"
-        android:inputType="date"
-        app:layout_constraintBottom_toTopOf="@+id/etxtcadeventoendereco"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.83" />
-
-    <EditText
         android:id="@+id/etxtcadeventoendereco"
         android:layout_width="313dp"
         android:layout_height="67dp"
@@ -36,7 +16,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/endereco"
         android:inputType="textMultiLine"
@@ -45,7 +25,7 @@
         app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.841" />
+        app:layout_constraintVertical_bias="0.988" />
 
     <EditText
         android:id="@+id/etxtcadeventodescricao"
@@ -56,7 +36,7 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="244dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/descricao"
         android:inputType="textMultiLine"
@@ -65,12 +45,13 @@
         app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.433" />
+        app:layout_constraintVertical_bias="0.686" />
 
     <EditText
         android:id="@+id/etxtcadeventotitulo"
         android:layout_width="313dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
@@ -84,7 +65,7 @@
         app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.73" />
+        app:layout_constraintVertical_bias="0.919" />
 
     <Button
         android:id="@+id/btncadeventosalvar"
@@ -95,14 +76,14 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="8dp"
         android:text="@string/salvar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.895"
         app:layout_constraintStart_toEndOf="@+id/btncadeventovoltar"
         app:layout_constraintTop_toBottomOf="@+id/etxtcadeventodescricao"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.475" />
 
     <Button
         android:id="@+id/btncadeventovoltar"
@@ -113,14 +94,14 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:text="@string/voltar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.062"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etxtcadeventodescricao"
-        app:layout_constraintVertical_bias="0.285" />
+        app:layout_constraintVertical_bias="0.475" />
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/cadeventolayer"
@@ -176,5 +157,25 @@
         app:layout_constraintHorizontal_bias="0.059"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.114" />
+
+    <EditText
+        android:id="@+id/etxtcadeventodata"
+        android:layout_width="313dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/data"
+        android:inputType="date"
+        app:layout_constraintBottom_toTopOf="@+id/etxtcadeventoendereco"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.934" />
 </android.support.constraint.ConstraintLayout>

@@ -55,8 +55,9 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Activity.ListarOngsActivity" />
         <activity android:name=".Activity.InfoOngAvulsoActivity" />
-        <activity android:name=".ListarEventosActivity" />
-        <activity android:name=".PerfilEventoActivity"></activity>
+        <activity android:name=".Activity.ListarEventosActivity" />
+        <activity android:name=".Activity.PerfilEventoActivity" />
+        <activity android:name=".Activity.PerfilPessoaActivity"></activity>
     </application>
 
 </manifest>

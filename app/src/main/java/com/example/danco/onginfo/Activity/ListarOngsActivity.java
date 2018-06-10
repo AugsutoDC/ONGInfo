@@ -34,6 +34,7 @@ public class ListarOngsActivity extends AppCompatActivity {
     private ArrayAdapter<Ong> arrayAdapterOng;
     Ong ongSelecionado;
     private Button btnlistongvoltar;
+    int pessoaPerfil;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +45,7 @@ public class ListarOngsActivity extends AppCompatActivity {
         btnlistongvoltar = findViewById(R.id.btnlistongvoltar);
 
         autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
-        userId = Base64Custom.codificadorBase64(autenticacao.getCurrentUser().getEmail());
+        ////userId = Base64Custom.codificadorBase64(autenticacao.getCurrentUser().getEmail());
 
         firebaseDatabase = ConfiguracaoFirebase.getFirebase();
 
@@ -54,14 +55,28 @@ public class ListarOngsActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 ongSelecionado = (Ong)parent.getItemAtPosition(position);
+                ////Toast.makeText(ListarOngsActivity.this, "Selecionado " + ongSelecionado.getNome(), Toast.LENGTH_SHORT).show();
                 abrirInfoOng(ongSelecionado);
             }
         });
 
+        Bundle extras = getIntent().getExtras();
+        if(extras != null && extras.containsKey("pessoaPerfil")) {
+            pessoaPerfil = extras.getInt("pessoaPerfil");
+        }else{
+            pessoaPerfil = 2;
+        }
+
+
         btnlistongvoltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                voltarTelaMenu();
+                if(pessoaPerfil == 1)
+                {
+                    voltarPerfilPessoa();
+                }else {
+                    voltarTelaMenu();
+                }
             }
         });
 
@@ -70,7 +85,7 @@ public class ListarOngsActivity extends AppCompatActivity {
 
     public void atualizarListView()
     {
-        firebaseDatabase.child("ong").addValueEventListener(new ValueEventListener() {
+        firebaseDatabase.child("ong").orderByChild("nome").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 listOng.clear();
@@ -97,12 +112,18 @@ public class ListarOngsActivity extends AppCompatActivity {
     {
         Intent intentOng = new Intent(ListarOngsActivity.this, InfoOngAvulsoActivity.class);
         intentOng.putExtra("ongId",  ongAtual.getId());
+        intentOng.putExtra("pessoaPerfil",  pessoaPerfil);
         startActivity(intentOng);
     }
 
     public void voltarTelaMenu()
     {
         Intent intentMenu = new Intent(ListarOngsActivity.this, StartPerfilActivity.class);
+        startActivity(intentMenu);
+    }
+    public void voltarPerfilPessoa()
+    {
+        Intent intentMenu = new Intent(ListarOngsActivity.this, PerfilPessoaActivity.class);
         startActivity(intentMenu);
     }
 }

@@ -1,4 +1,4 @@
-package com.example.danco.onginfo;
+package com.example.danco.onginfo.Activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -10,14 +10,11 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.danco.onginfo.Activity.CadastroEventoActivity;
-import com.example.danco.onginfo.Activity.InfoOngAvulsoActivity;
-import com.example.danco.onginfo.Activity.PerfilOngActivity;
-import com.example.danco.onginfo.Activity.TelaPrincipalActivity;
 import com.example.danco.onginfo.DAO.ConfiguracaoFirebase;
 import com.example.danco.onginfo.Entidades.Evento;
 import com.example.danco.onginfo.Entidades.Ong;
 import com.example.danco.onginfo.Helper.Base64Custom;
+import com.example.danco.onginfo.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -39,6 +36,8 @@ public class ListarEventosActivity extends AppCompatActivity {
     private List<Evento> listEvento = new ArrayList<Evento>();
     private ArrayAdapter<Evento> arrayAdapterEvento;
     Evento eventoSelecionado;
+    int pessoaPerfil;
+    String ongId;
 
 
     @Override
@@ -52,18 +51,24 @@ public class ListarEventosActivity extends AppCompatActivity {
 
         //Pegando o firebase e o id da ong logada
         autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
-        userId = Base64Custom.codificadorBase64(autenticacao.getCurrentUser().getEmail());
+        /////userId = Base64Custom.codificadorBase64(autenticacao.getCurrentUser().getEmail());
 
         firebaseDatabase = ConfiguracaoFirebase.getFirebase();
 
         Bundle extras = getIntent().getExtras();
-        String ongId;
+
         if(extras != null && extras.containsKey("ongId")) {
             ongId = extras.getString("ongId");
 
-            getDadosPerfil(ongId);
+            getDadosPerfil();
         }else{
             voltarInfoOng();
+        }
+
+        if(extras != null && extras.containsKey("pessoaPerfil")) {
+            pessoaPerfil = extras.getInt("pessoaPerfil");
+        }else{
+            pessoaPerfil = 2;
         }
 
         btnlisteventosvoltar.setOnClickListener(new View.OnClickListener() {
@@ -83,7 +88,7 @@ public class ListarEventosActivity extends AppCompatActivity {
 
     }
 
-    public void getDadosPerfil(String ongId)
+    public void getDadosPerfil()
     {
         firebaseDatabase.child("ong").child(ongId).addValueEventListener(new ValueEventListener() {
             @Override
@@ -128,6 +133,7 @@ public class ListarEventosActivity extends AppCompatActivity {
     {
         Intent intentEvento = new Intent(ListarEventosActivity.this, InfoOngAvulsoActivity.class);
         intentEvento.putExtra("ongId",  ong.getId());
+        intentEvento.putExtra("pessoaPerfil",  pessoaPerfil);
         startActivity(intentEvento);
     }
 
@@ -136,6 +142,7 @@ public class ListarEventosActivity extends AppCompatActivity {
         Intent intentEvento = new Intent(ListarEventosActivity.this, PerfilEventoActivity.class);
         intentEvento.putExtra("eventoId",  eventoAtual.getId());
         intentEvento.putExtra("ongId",  ong.getId());
+        intentEvento.putExtra("pessoaPerfil",  pessoaPerfil);
         startActivity(intentEvento);
     }
 }

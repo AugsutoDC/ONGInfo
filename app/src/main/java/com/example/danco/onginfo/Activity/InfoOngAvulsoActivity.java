@@ -8,10 +8,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.danco.onginfo.DAO.ConfiguracaoFirebase;
-import com.example.danco.onginfo.Entidades.Evento;
 import com.example.danco.onginfo.Entidades.Ong;
 import com.example.danco.onginfo.Helper.Base64Custom;
-import com.example.danco.onginfo.ListarEventosActivity;
 import com.example.danco.onginfo.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -31,6 +29,7 @@ public class InfoOngAvulsoActivity extends AppCompatActivity {
     DatabaseReference firebaseDatabase;
     private Ong ong;
     private Button btninfoongeventos;
+    int pessoaPerfil;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +45,7 @@ public class InfoOngAvulsoActivity extends AppCompatActivity {
 
         //Pegando o firebase e o id da ong logada
         autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
-        userId = Base64Custom.codificadorBase64(autenticacao.getCurrentUser().getEmail());
+        ///userId = Base64Custom.codificadorBase64(autenticacao.getCurrentUser().getEmail());
 
         firebaseDatabase = ConfiguracaoFirebase.getFirebase();
 
@@ -54,7 +53,7 @@ public class InfoOngAvulsoActivity extends AppCompatActivity {
         String ongId;
         if(extras != null && extras.containsKey("ongId")) {
             ongId = extras.getString("ongId");
-            firebaseDatabase.child("ong").child(userId).addValueEventListener(new ValueEventListener() {
+            firebaseDatabase.child("ong").child(ongId).addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     ong = dataSnapshot.getValue(Ong.class);
@@ -62,7 +61,6 @@ public class InfoOngAvulsoActivity extends AppCompatActivity {
                     txtinfoongtelefone.setText(ong.getTelefone());
                     txtinfoonglocal.setText(ong.getLocal());
                     txtinfoongsobre.setText(ong.getSobre());
-
                 }
 
                 @Override
@@ -71,6 +69,13 @@ public class InfoOngAvulsoActivity extends AppCompatActivity {
                 }
             });
         }
+
+        if(extras != null && extras.containsKey("pessoaPerfil")) {
+            pessoaPerfil = extras.getInt("pessoaPerfil");
+        }else{
+            pessoaPerfil = 2;
+        }
+
 
         btninfoongvoltar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,6 +95,7 @@ public class InfoOngAvulsoActivity extends AppCompatActivity {
     public void voltarListaOngs()
     {
         Intent intentOng = new Intent(InfoOngAvulsoActivity.this, ListarOngsActivity.class);
+        intentOng.putExtra("pessoaPerfil",  pessoaPerfil);
         startActivity(intentOng);
     }
 
@@ -97,6 +103,7 @@ public class InfoOngAvulsoActivity extends AppCompatActivity {
     {
         Intent intentEvento = new Intent(InfoOngAvulsoActivity.this, ListarEventosActivity.class);
         intentEvento.putExtra("ongId",  ong.getId());
+        intentEvento.putExtra("pessoaPerfil",  pessoaPerfil);
         startActivity(intentEvento);
     }
 }

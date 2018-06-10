@@ -1,7 +1,9 @@
 package com.example.danco.onginfo.Activity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.constraint.ConstraintLayout;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Layout;
@@ -23,6 +25,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.io.Serializable;
 import java.text.SimpleDateFormat;
+import java.util.UUID;
 
 public class CadastroEventoActivity extends AppCompatActivity {
 
@@ -38,6 +41,7 @@ public class CadastroEventoActivity extends AppCompatActivity {
     DatabaseReference firebaseDatabase;
     ConstraintLayout cadeventolayer;
     private ImageButton ibtncadeventoremover;
+    private AlertDialog.Builder confirmarExclusaoDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -139,20 +143,43 @@ public class CadastroEventoActivity extends AppCompatActivity {
 
     public String gerarEventoId()
     {
+        /*
         SimpleDateFormat idEvento = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-        String eventoId = idEvento.toString();
-        eventoId = eventoId.replace("/","");
-        eventoId = eventoId.replace(":","");
-        eventoId = eventoId.replace(" ","");
-        eventoId = Base64Custom.codificadorBase64(eventoId);
+        String eventoIds = idEvento.toString();
+        eventoIds = eventoIds.replace("/","");
+        eventoIds = eventoIds.replace(":","");
+        eventoIds = eventoIds.replace(" ","");
+        eventoIds = Base64Custom.codificadorBase64(eventoIds);
 
-        return eventoId;
+        */
+        UUID uuid = UUID.randomUUID();
+        String strUuid = uuid.toString();
+        strUuid = Base64Custom.codificadorBase64(strUuid);
+        return strUuid;
     }
 
     public void removerEvento()
     {
         evento.setOngId(userId);
-        firebaseDatabase.child("eventos").child(evento.getOngId()).child(evento.getId()).removeValue();
-        retornarPerfil();
+        confirmarExclusaoDialog = new AlertDialog.Builder(CadastroEventoActivity.this);
+        confirmarExclusaoDialog.setTitle("Confirmar Exclusão!!");
+        confirmarExclusaoDialog.setMessage("Você confirma exclusão do evento: \n" + evento.getTitulo());
+        confirmarExclusaoDialog.setNegativeButton("Não", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Toast.makeText(CadastroEventoActivity.this,"Exclusão cancelada",Toast.LENGTH_SHORT).show();
+            }
+        });
+        confirmarExclusaoDialog.setPositiveButton("Sim", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                firebaseDatabase.child("eventos").child(evento.getOngId()).child(evento.getId()).removeValue();
+                ///Toast.makeText(CadastroEventoActivity.this,"Excluído com sucesso!",Toast.LENGTH_SHORT).show();
+                retornarPerfil();
+            }
+        });
+
+        confirmarExclusaoDialog.create();
+        confirmarExclusaoDialog.show();
     }
 }

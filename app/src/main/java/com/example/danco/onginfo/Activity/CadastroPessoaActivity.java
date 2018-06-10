@@ -107,7 +107,7 @@ public class CadastroPessoaActivity extends AppCompatActivity {
                     }catch (FirebaseAuthUserCollisionException e){
                         errorExcecao = " Esse e-mail já está cadastrado no sistema";
                     }catch (Exception e){
-                        errorExcecao = " Err ao efetuar o cadastro!";
+                        errorExcecao = " Erro ao efetuar o cadastro!";
                         e.printStackTrace();
                     }
                     Toast.makeText(CadastroPessoaActivity.this, "Erro: " + errorExcecao, Toast.LENGTH_LONG).show();

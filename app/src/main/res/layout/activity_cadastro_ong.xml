@@ -26,48 +26,48 @@
 
     <EditText
         android:id="@+id/etxtcadnomeong"
-        android:layout_width="wrap_content"
-        android:layout_height="42dp"
+        android:layout_width="313dp"
+        android:layout_height="45dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/nome_ong"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/etxtcadsenhaong"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imglogo2"
-        app:layout_constraintVertical_bias="0.357" />
+        app:layout_constraintVertical_bias="0.927" />
 
     <EditText
         android:id="@+id/etxtcadconfirmarsenhaong"
-        android:layout_width="wrap_content"
-        android:layout_height="42dp"
+        android:layout_width="313dp"
+        android:layout_height="45dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/confirmar_senha"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etxtcadsenhaong"
-        app:layout_constraintVertical_bias="0.017" />
+        app:layout_constraintVertical_bias="0.044" />
 
     <EditText
         android:id="@+id/etxtcadsenhaong"
-        android:layout_width="wrap_content"
-        android:layout_height="42dp"
+        android:layout_width="313dp"
+        android:layout_height="45dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
@@ -79,10 +79,10 @@
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imglogo2"
-        app:layout_constraintVertical_bias="0.305" />
+        app:layout_constraintVertical_bias="0.286" />
 
     <Button
         android:id="@+id/btncadcancelarong"
@@ -97,10 +97,10 @@
         android:text="@string/cancelar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintHorizontal_bias="0.064"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etxtcademailong"
-        app:layout_constraintVertical_bias="0.497" />
+        app:layout_constraintVertical_bias="0.494" />
 
     <Button
         android:id="@+id/btncadconfirmarong"
@@ -115,21 +115,21 @@
         android:text="@string/confirmar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.769"
+        app:layout_constraintHorizontal_bias="0.86"
         app:layout_constraintStart_toEndOf="@+id/btncadcancelarong"
         app:layout_constraintTop_toBottomOf="@+id/etxtcademailong"
-        app:layout_constraintVertical_bias="0.497" />
+        app:layout_constraintVertical_bias="0.494" />
 
     <EditText
         android:id="@+id/etxtcademailong"
-        android:layout_width="wrap_content"
-        android:layout_height="42dp"
+        android:layout_width="313dp"
+        android:layout_height="45dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/email"
         android:inputType="textEmailAddress"

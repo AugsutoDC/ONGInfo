@@ -1,4 +1,4 @@
-package com.example.danco.onginfo;
+package com.example.danco.onginfo.Activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +12,7 @@ import com.example.danco.onginfo.DAO.ConfiguracaoFirebase;
 import com.example.danco.onginfo.Entidades.Evento;
 import com.example.danco.onginfo.Entidades.Ong;
 import com.example.danco.onginfo.Helper.Base64Custom;
+import com.example.danco.onginfo.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -32,6 +33,7 @@ public class PerfilEventoActivity extends AppCompatActivity {
     Evento evento;
     private Button btnperfileventovoltar;
     Ong ong;
+    int pessoaPerfil;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +62,12 @@ public class PerfilEventoActivity extends AppCompatActivity {
         }else{
             ongId = extras.getString("ongId");
             voltarListaEventos();
+        }
+
+        if(extras != null && extras.containsKey("pessoaPerfil")) {
+            pessoaPerfil = extras.getInt("pessoaPerfil");
+        }else{
+            pessoaPerfil = 2;
         }
 
         btnperfileventovoltar.setOnClickListener(new View.OnClickListener() {
@@ -97,7 +105,7 @@ public class PerfilEventoActivity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 ong = dataSnapshot.getValue(Ong.class);
-                Toast.makeText(PerfilEventoActivity.this, "Nome: " + ong.getNome(), Toast.LENGTH_SHORT).show();
+                ///Toast.makeText(PerfilEventoActivity.this, "Nome: " + ong.getNome(), Toast.LENGTH_SHORT).show();
                 txtperfileventonome.setText(ong.getNome().toUpperCase());
                 exibirEvento();
 
@@ -114,6 +122,7 @@ public class PerfilEventoActivity extends AppCompatActivity {
     {
         Intent intentEvento = new Intent(PerfilEventoActivity.this, ListarEventosActivity.class);
         intentEvento.putExtra("ongId",  ongId);
+        intentEvento.putExtra("pessoaPerfil",  pessoaPerfil);
         startActivity(intentEvento);
     }
 }
