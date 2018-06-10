@@ -10,7 +10,7 @@
         android:id="@+id/btncadcancelarpessoa"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
@@ -19,16 +19,16 @@
         android:text="@string/cancelar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.282"
+        app:layout_constraintHorizontal_bias="0.064"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etxtcadconfirmarsenhapessoa"
-        app:layout_constraintVertical_bias="0.125" />
+        app:layout_constraintVertical_bias="0.242" />
 
     <Button
         android:id="@+id/btncadconfirmarpessoa"
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
@@ -37,33 +37,36 @@
         android:text="@string/confirmar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.258"
+        app:layout_constraintHorizontal_bias="0.878"
         app:layout_constraintStart_toEndOf="@+id/btncadcancelarpessoa"
         app:layout_constraintTop_toBottomOf="@+id/etxtcadconfirmarsenhapessoa"
-        app:layout_constraintVertical_bias="0.125" />
+        app:layout_constraintVertical_bias="0.242" />
 
     <EditText
-        android:id="@+id/etxteditsobreong"
-        android:layout_width="wrap_content"
+        android:id="@+id/etxtcademailpessoa"
+        android:layout_width="313dp"
         android:layout_height="42dp"
-        android:layout_marginBottom="336dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/email"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imglogo"
+        app:layout_constraintVertical_bias="0.275" />
 
     <EditText
         android:id="@+id/etxtloginsenhapessoa"
-        android:layout_width="wrap_content"
+        android:layout_width="313dp"
         android:layout_height="46dp"
-        android:layout_marginBottom="172dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
@@ -74,16 +77,16 @@
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etxteditsobreong"
-        app:layout_constraintVertical_bias="0.027" />
+        app:layout_constraintTop_toBottomOf="@+id/etxtcademailpessoa"
+        app:layout_constraintVertical_bias="0.021" />
 
     <EditText
         android:id="@+id/etxtcadconfirmarsenhapessoa"
-        android:layout_width="wrap_content"
+        android:layout_width="313dp"
         android:layout_height="42dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
@@ -94,10 +97,10 @@
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.516"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/etxtloginsenhapessoa"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.038" />
 
     <ImageView
         android:id="@+id/imglogo"
@@ -108,38 +111,33 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="8dp"
         android:contentDescription="@string/logo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.032"
-        app:srcCompat="@drawable/logo" />
+        app:layout_constraintVertical_bias="0.044"
+        app:srcCompat="@drawable/onginfo" />
 
-    <View
-        android:id="@+id/divider"
-        android:layout_width="350dp"
-        android:layout_height="20dp"
-        android:background="?android:attr/listDivider"
-        android:visibility="visible"
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="394dp" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="144dp"
+    <EditText
+        android:id="@+id/etxtcadnomepessoa"
+        android:layout_width="313dp"
         android:layout_height="wrap_content"
-        android:text="Facebook"
-        tools:layout_editor_absoluteX="120dp"
-        tools:layout_editor_absoluteY="429dp" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="OU"
-        tools:layout_editor_absoluteX="183dp"
-        tools:layout_editor_absoluteY="394dp" />
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:hint="@string/nome"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/etxtcademailpessoa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imglogo"
+        app:layout_constraintVertical_bias="0.91" />
 
 </android.support.constraint.ConstraintLayout>

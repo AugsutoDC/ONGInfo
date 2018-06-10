@@ -84,7 +84,7 @@ public class CadastroPessoaActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    Toast.makeText(CadastroPessoaActivity.this, "Usuário cadastrado com sucesse", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CadastroPessoaActivity.this, "Usuário cadastrado com sucesso", Toast.LENGTH_SHORT).show();
                     String identificadorUsuario = Base64Custom.codificadorBase64(pessoas.getEmail());
                     FirebaseUser usuarioFirebase = task.getResult().getUser();
                     pessoas.setId(identificadorUsuario);;
@@ -107,7 +107,7 @@ public class CadastroPessoaActivity extends AppCompatActivity {
                     }catch (FirebaseAuthUserCollisionException e){
                         errorExcecao = " Esse e-mail já está cadastrado no sistema";
                     }catch (Exception e){
-                        errorExcecao = " Err ao efetuar o cadastro!";
+                        errorExcecao = " Erro ao efetuar o cadastro!";
                         e.printStackTrace();
                     }
                     Toast.makeText(CadastroPessoaActivity.this, "Erro: " + errorExcecao, Toast.LENGTH_LONG).show();

@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.danco.onginfo.DAO.ConfiguracaoFirebase;
 import com.example.danco.onginfo.R;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -15,6 +14,7 @@ public class StartPerfilActivity extends AppCompatActivity {
     private Button btnpessoa;
     private Button btnong;
     private FirebaseAuth autenticacao;
+    private Button btnverongs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,20 +25,29 @@ public class StartPerfilActivity extends AppCompatActivity {
 
         btnong = findViewById(R.id.btnloginong);
         btnpessoa = findViewById(R.id.btnloginpessoa);
+        btnverongs = findViewById(R.id.btnverongs);
 
         btnong.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent itentong = new Intent(StartPerfilActivity.this, LoginOngActivity.class);
-                startActivity(itentong);
+                Intent intentong = new Intent(StartPerfilActivity.this, LoginOngActivity.class);
+                startActivity(intentong);
             }
         });
 
         btnpessoa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent itentpessoa = new Intent(StartPerfilActivity.this, LoginPessoaActivity.class);
-                startActivity(itentpessoa);
+                Intent intentpessoa = new Intent(StartPerfilActivity.this, LoginPessoaActivity.class);
+                startActivity(intentpessoa);
+            }
+        });
+
+        btnverongs.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentallongs = new Intent(StartPerfilActivity.this, ListarOngsActivity.class);
+                startActivity(intentallongs);
             }
         });
        /* Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);

@@ -84,7 +84,7 @@ public class LoginPessoaActivity extends AppCompatActivity {
     }
 
     public void abrirTelaListagemOng(){
-        Intent intentAbrirTelaListagemOng = new Intent(LoginPessoaActivity.this, TelaPrincipalActivity.class);
+        Intent intentAbrirTelaListagemOng = new Intent(LoginPessoaActivity.this, PerfilPessoaActivity.class);
         startActivity(intentAbrirTelaListagemOng);
     }
 

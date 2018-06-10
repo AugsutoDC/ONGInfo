@@ -35,6 +35,8 @@ public class CadastroOngActivity extends AppCompatActivity {
     private Ong ong;
     private FirebaseAuth autenticacao;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +50,7 @@ public class CadastroOngActivity extends AppCompatActivity {
         btncadconfirmarong = findViewById(R.id.btncadconfirmarong);
         btncadcancelarong = findViewById(R.id.btncadcancelarong);
 
+
         btncadcancelarong.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,14 +62,15 @@ public class CadastroOngActivity extends AppCompatActivity {
         btncadconfirmarong.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(CadastroOngActivity.this,"Nome: " + etxtcadnomeong.getText().toString() + "Email: " + etxtcademailong.getText().toString() + "Senha: " + etxtcadsenhaong.getText().toString(), Toast.LENGTH_SHORT).show();
+                ///Toast.makeText(CadastroOngActivity.this,"Nome: " + etxtcadnomeong.getText().toString() + "Email: " + etxtcademailong.getText().toString() + "Senha: " + etxtcadsenhaong.getText().toString(), Toast.LENGTH_SHORT).show();
                 if(etxtcadsenhaong.getText().toString().equals(etxtcadconfirmarsenhaong.getText().toString())){
-                    Toast.makeText(CadastroOngActivity.this,"Nome: " + etxtcadnomeong.getText().toString() + "Email: " + etxtcademailong.getText().toString() + "Senha: " + etxtcadsenhaong.getText().toString(), Toast.LENGTH_SHORT).show();
+
                     ong = new Ong();
                     ong.setNome(etxtcadnomeong.getText().toString());
                     ong.setEmail(etxtcademailong.getText().toString());
                     ong.setSenha(etxtcadsenhaong.getText().toString());
-                    Toast.makeText(CadastroOngActivity.this,"Nome: " + ong.getNome() + "Email: " + ong.getEmail() + "Senha: " + ong.getSenha(), Toast.LENGTH_SHORT).show();
+
+
                     cadastrarOng();
 
                 }else{
@@ -78,7 +82,7 @@ public class CadastroOngActivity extends AppCompatActivity {
     }
 
     private void cadastrarOng(){
-        Toast.makeText(CadastroOngActivity.this,"Nome: " + ong.getNome() + "Email: " + ong.getEmail() + "Senha: " + ong.getSenha(), Toast.LENGTH_SHORT).show();
+        ///Toast.makeText(CadastroOngActivity.this,"Nome: " + ong.getNome() + "Email: " + ong.getEmail() + "Senha: " + ong.getSenha(), Toast.LENGTH_SHORT).show();
         autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
         autenticacao.createUserWithEmailAndPassword(
                 ong.getEmail(),ong.getSenha()
@@ -86,7 +90,7 @@ public class CadastroOngActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    Toast.makeText(CadastroOngActivity.this, "Usuário cadastrado com sucesse", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CadastroOngActivity.this, "Usuário cadastrado com sucesso", Toast.LENGTH_SHORT).show();
                     String identificadorUsuario = Base64Custom.codificadorBase64(ong.getEmail());
                     FirebaseUser usuarioFirebase = task.getResult().getUser();
                     ong.setId(identificadorUsuario);;
@@ -109,7 +113,7 @@ public class CadastroOngActivity extends AppCompatActivity {
                     }catch (FirebaseAuthUserCollisionException e){
                         errorExcecao = " Esse e-mail já está cadastrado no sistema";
                     }catch (Exception e){
-                        errorExcecao = " Err ao efetuar o cadastro!";
+                        errorExcecao = " Erro ao efetuar o cadastro!";
                         e.printStackTrace();
                     }
                     Toast.makeText(CadastroOngActivity.this, "Erro: " + errorExcecao, Toast.LENGTH_LONG).show();
